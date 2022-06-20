@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Github User App</string>
+
+    <!-- Other string resources-->
+
+    <string name="username">Username</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="company_info">lorem ipsum</string>
+    <string name="location">Location</string>
+    <string name="location_info">lorem ipsum dolor</string>
+    <string name="repository_number">##</string>
+    <string name="following_number">##</string>
+    <string name="followers_number">##</string>
+    <string name="repository">Repository</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="github_logo">github logo</string>
+    <string name="github_com_frhnfath">github.com/frhnfath</string>
+    <string name="tab_text_1">Following</string>
+    <string name="tab_text_2">Followers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Find Github User</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+
+</resources>

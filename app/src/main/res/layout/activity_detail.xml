@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/img_detail"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="8dp"
+        tools:src='@tools:sample/avatars'/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_detail_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/img_detail"
+        android:text="@string/username"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_detail_name"
+        android:text="@string/name"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail_name">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/repository"
+                style="@style/TableContext"
+                android:text="@string/repository" />
+
+            <TextView
+                android:id="@+id/following"
+                style="@style/TableContext"
+                android:text="@string/following" />
+
+            <TextView
+                android:id="@+id/followers"
+                style="@style/TableContext"
+                android:text="@string/followers" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/repository_number"
+                style="@style/TableContext"
+                android:text="@string/repository_number" />
+
+            <TextView
+                android:id="@+id/following_number"
+                style="@style/TableContext"
+                android:text="@string/following_number" />
+
+            <TextView
+                android:id="@+id/followers_number"
+                style="@style/TableContext"
+                android:text="@string/followers_number" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/company"
+                style="@style/DetailContext"
+                android:text="@string/company" />
+
+            <TextView
+                android:id="@+id/company_info"
+                style="@style/DetailsContext"
+                android:text="@string/company_info" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/DetailContext"
+                android:text="@string/location" />
+
+            <TextView
+                android:id="@+id/location_info"
+                style="@style/DetailsContext"
+                android:text="@string/location_info" />
+
+        </TableRow>
+    </TableLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/github_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:tabTextColor="@color/github" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/favorite_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/favorite"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/fav_toggle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
